@@ -4,7 +4,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.10.0
+Version: 2.10.1
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
@@ -85,5 +85,3 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/*.{a,la} \
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.urls
 %{_datadir}/gtk-doc/html/ximian-connector
 %{_datadir}/evolution-exchange
-
-
