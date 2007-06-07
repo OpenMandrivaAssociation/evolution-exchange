@@ -1,10 +1,10 @@
-%define major_version 2.10
-%define evolution_version 2.9.2
+%define major_version 2.12
+%define evolution_version 2.11
 %define api_version 1.2
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.10.2
+Version: 2.11.3.1
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
@@ -69,15 +69,15 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/*.{a,la} \
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
 
 %post
-%post_install_gconf_schemas apps_exchange_addressbook-2.10
+%post_install_gconf_schemas apps_exchange_addressbook-%major_version
 
 %preun
-%preun_uninstall_gconf_schemas apps_exchange_addressbook-2.10
+%preun_uninstall_gconf_schemas apps_exchange_addressbook-%major_version
 
 %files -f %{name}-%{major_version}.lang
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog NEWS README
-%_sysconfdir/gconf/schemas/apps_exchange_addressbook-2.10.schemas
+%_sysconfdir/gconf/schemas/apps_exchange_addressbook-%major_version.schemas
 %{_bindir}/*
 %{_libdir}/bonobo/servers/*
 %{_libexecdir}/evolution/%{major_version}/evolution-exchange-storage
