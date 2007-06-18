@@ -4,7 +4,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.11.3.1
+Version: 2.11.4
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
@@ -40,8 +40,8 @@ Currently, only Exchange 2000 and 2003 are supported.
 
 #fix build 
 intltoolize --force
-aclocal-1.9
-automake-1.9
+aclocal
+automake
 autoconf
 
 %build
