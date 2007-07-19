@@ -19,8 +19,6 @@ BuildRequires: evolution-data-server-devel >= 1.9.6
 BuildRequires: db4.2-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
-BuildRequires: libgnomeprintui-devel
-BuildRequires: libgtkhtml-3.14-devel
 BuildRequires: perl-XML-Parser
 BuildRequires: automake1.9
 BuildRequires: intltool
