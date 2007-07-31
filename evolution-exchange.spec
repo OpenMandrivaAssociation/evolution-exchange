@@ -4,7 +4,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.11.5
+Version: 2.11.6
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
@@ -35,12 +35,6 @@ Currently, only Exchange 2000 and 2003 are supported.
 
 %prep
 %setup -q 
-
-#fix build 
-intltoolize --force
-aclocal
-automake
-autoconf
 
 %build
 
@@ -81,5 +75,4 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/*.{a,la} \
 %{_libexecdir}/evolution/%{major_version}/evolution-exchange-storage
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.so
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.urls
-%{_datadir}/gtk-doc/html/ximian-connector
 %{_datadir}/evolution-exchange
