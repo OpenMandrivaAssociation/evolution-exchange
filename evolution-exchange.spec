@@ -4,7 +4,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.11.91
+Version: 2.11.92
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
@@ -15,7 +15,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
-BuildRequires: evolution-data-server-devel >= 1.9.6
+BuildRequires: evolution-data-server-devel >= 1.9.92
 BuildRequires: db4.2-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
