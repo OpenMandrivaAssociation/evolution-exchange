@@ -4,7 +4,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.12.0
+Version: 2.12.1
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
