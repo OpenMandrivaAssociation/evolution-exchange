@@ -1,10 +1,10 @@
-%define major_version 2.12
+%define major_version 2.22
 %define evolution_version 2.11
 %define api_version 1.2
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.12.1
+Version: 2.21.1
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
@@ -76,4 +76,4 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/*.{a,la} \
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.so
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.urls
 %{_datadir}/evolution-exchange
-%_datadir/gtk-doc/html/ximian-connector/
+%_datadir/gtk-doc/html/%name
