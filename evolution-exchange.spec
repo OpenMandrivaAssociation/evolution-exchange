@@ -4,7 +4,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.21.3
+Version: 2.21.4
 Release: %mkrel 1
 License: 	GPL
 Group:		Networking/Mail
@@ -14,7 +14,7 @@ URL: 		http://www.ximian.com/products/ximian_evolution/
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
-BuildRequires: evolution-data-server-devel >= 1.9.92
+BuildRequires: evolution-data-server-devel >= 2.21.4
 BuildRequires: db4.2-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
