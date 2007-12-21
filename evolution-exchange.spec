@@ -10,6 +10,7 @@ License: 	GPL
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL: 		http://www.ximian.com/products/ximian_evolution/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
