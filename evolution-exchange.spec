@@ -5,7 +5,7 @@
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
 Version: 2.21.4
-Release: %mkrel 1
+Release: %mkrel 2
 License: 	GPL
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -16,7 +16,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
 BuildRequires: evolution-data-server-devel >= 2.21.4
-BuildRequires: db4.2-devel
+BuildRequires: db4-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
 BuildRequires: perl-XML-Parser
