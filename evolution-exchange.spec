@@ -5,7 +5,7 @@
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
 Version: 2.21.91
-Release: %mkrel 1
+Release: %mkrel 2
 License: 	GPL
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
