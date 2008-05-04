@@ -24,6 +24,7 @@ BuildRequires: automake1.9
 BuildRequires: intltool
 BuildRequires: gnome-common
 BuildRequires: libmono-devel
+BuildRequires: gtk-doc
 Obsoletes: ximian-connector
 Provides: ximian-connector
 
@@ -39,7 +40,7 @@ Currently, only Exchange 2000 and 2003 are supported.
 %build
 
 %configure2_5x --with-openldap=yes --with-static-ldap=no \
---with-krb5=%{_prefix} --with-krb5-libs=%{_libdir}
+--with-krb5=%{_prefix} --with-krb5-libs=%{_libdir} --enable-gtk-doc
 
 %make
 
