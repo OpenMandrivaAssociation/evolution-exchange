@@ -3,7 +3,7 @@
 %define api_version 1.2
 
 # caused by e-d-s which can't be fixed for now
-%define _disable_ld_no_undefined 0
+%define _disable_ld_no_undefined 1
 %define _disable_ld_as_needed 1
 
 Name:		evolution-exchange
