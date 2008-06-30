@@ -8,9 +8,9 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.22.2
+Version: 2.22.3
 Release: %mkrel 1
-License: 	GPL
+License: 	GPLv2
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL: 		http://www.ximian.com/products/ximian_evolution/
@@ -19,11 +19,10 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
-BuildRequires: evolution-data-server-devel >= 2.21.4
+BuildRequires: evolution-data-server-devel >= 2.22.3
 BuildRequires: db4-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
-BuildRequires: perl-XML-Parser
 BuildRequires: automake1.9
 BuildRequires: intltool
 BuildRequires: gnome-common
