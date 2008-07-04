@@ -20,6 +20,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
 BuildRequires: evolution-data-server-devel >= 2.22.3
+BuildRequires: gnome-pilot-devel
 BuildRequires: db4-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
