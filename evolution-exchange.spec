@@ -8,7 +8,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.25.1
+Version: 2.25.2
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
@@ -43,8 +43,7 @@ Currently, only Exchange 2000 and 2003 are supported.
 
 %build
 
-%configure2_5x --with-openldap=yes --with-static-ldap=no \
---with-krb5=%{_prefix} --with-krb5-libs=%{_libdir} --enable-gtk-doc
+%configure2_5x --with-openldap=yes --with-static-ldap=no --enable-gtk-doc
 
 %make
 
