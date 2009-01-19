@@ -30,6 +30,8 @@ BuildRequires: intltool
 BuildRequires: gnome-common
 BuildRequires: libmono-devel
 BuildRequires: gtk-doc
+#gw this is only required because it is in libgpilotd.la
+BuildRequires: hal-devel
 Obsoletes: ximian-connector
 Provides: ximian-connector
 
