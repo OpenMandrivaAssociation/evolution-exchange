@@ -8,7 +8,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.25.5
+Version: 2.25.90
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
@@ -20,7 +20,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
-BuildRequires: evolution-data-server-devel >= 2.24.5
+BuildRequires: evolution-data-server-devel >= 2.25.90
 BuildRequires: gnome-pilot-devel
 BuildRequires: db4-devel
 BuildRequires: openldap-devel 
@@ -46,7 +46,7 @@ Currently, only Exchange 2000 and 2003 are supported.
 %patch -p1
 
 %build
-
+export CPPFLAGS="$CPPFLAGS -I%_includedir/libical"
 %configure2_5x --with-openldap=yes --with-static-ldap=no --enable-gtk-doc
 
 %make
