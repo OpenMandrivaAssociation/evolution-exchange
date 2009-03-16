@@ -1,5 +1,5 @@
 %define major_version 2.26
-%define evolution_version 2.23
+%define evolution_version 2.25
 %define api_version 1.2
 
 # caused by e-d-s which can't be fixed for now
@@ -8,7 +8,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.25.92
+Version: 2.26.0
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
@@ -20,7 +20,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
-BuildRequires: evolution-data-server-devel >= 2.25.92
+BuildRequires: evolution-data-server-devel >= 2.26.0
 BuildRequires: gnome-pilot-devel
 BuildRequires: db4-devel
 BuildRequires: openldap-devel 
