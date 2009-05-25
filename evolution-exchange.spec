@@ -1,5 +1,6 @@
 %define major_version 2.28
 %define evolution_version 2.27
+%define eds_version 2.27.2
 %define api_version 1.2
 
 # caused by e-d-s which can't be fixed for now
@@ -8,19 +9,18 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.27.1
+Version: 2.27.2
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-Patch: evolution-exchange-2.25.3-format-string.patch
 URL: 		http://www.ximian.com/products/ximian_evolution/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
-BuildRequires: evolution-data-server-devel >= 2.27.1
+BuildRequires: evolution-data-server-devel >= %eds_version
 BuildRequires: gnome-pilot-devel
 BuildRequires: db4-devel
 BuildRequires: openldap-devel 
@@ -43,7 +43,6 @@ Currently, only Exchange 2000 and 2003 are supported.
 
 %prep
 %setup -q 
-%patch -p1
 
 %build
 export CPPFLAGS="$CPPFLAGS -I%_includedir/libical"
