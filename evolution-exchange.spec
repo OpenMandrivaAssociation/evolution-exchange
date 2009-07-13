@@ -1,6 +1,6 @@
 %define major_version 2.28
 %define evolution_version 2.27
-%define eds_version 2.27.2
+%define eds_version 2.27.4
 %define api_version 1.2
 
 # caused by e-d-s which can't be fixed for now
@@ -9,7 +9,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.27.3
+Version: 2.27.4
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
