@@ -32,6 +32,8 @@ BuildRequires: libmono-devel
 BuildRequires: gtk-doc
 #gw this is only required because it is in libgpilotd.la
 BuildRequires: hal-devel
+#gw another .la dep
+BuildRequires: gnome-desktop-devel
 Obsoletes: ximian-connector
 Provides: ximian-connector
 
