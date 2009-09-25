@@ -7,10 +7,15 @@
 %define _disable_ld_no_undefined 1
 %define _disable_ld_as_needed 1
 
+%define build_mono 1
+%ifarch %arm %mips
+%define build_mono 0
+%endif
+
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
 Version: 2.28.0
-Release: %mkrel 1
+Release: %mkrel 2
 License: 	GPLv2
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -28,7 +33,9 @@ BuildRequires: krb5-devel
 BuildRequires: automake1.9
 BuildRequires: intltool
 BuildRequires: gnome-common
+%if %{build_mono}
 BuildRequires: libmono-devel
+%endif
 BuildRequires: gtk-doc
 #gw this is only required because it is in libgpilotd.la
 BuildRequires: hal-devel
