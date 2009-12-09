@@ -1,5 +1,5 @@
-%define major_version 2.28
-%define evolution_version 2.27
+%define major_version 2.30
+%define evolution_version %version
 %define eds_version %version
 %define api_version 1.2
 
@@ -14,11 +14,12 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.28.1
+Version: 2.29.3
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch: evolution-exchange-replace-e_error-by-e_alert.patch
 URL: 		http://www.ximian.com/products/ximian_evolution/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
@@ -52,6 +53,7 @@ Currently, only Exchange 2000 and 2003 are supported.
 
 %prep
 %setup -q 
+%patch -p1
 
 %build
 export CPPFLAGS="$CPPFLAGS -I%_includedir/libical"
@@ -87,9 +89,10 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/*.{a,la} \
 %doc AUTHORS COPYING ChangeLog NEWS README
 %_sysconfdir/gconf/schemas/apps_exchange_addressbook-%major_version.schemas
 %{_bindir}/*
-%{_libdir}/bonobo/servers/*
-%{_libexecdir}/evolution/%{major_version}/evolution-exchange-storage
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.so
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.urls
+%{_libdir}/evolution-data-server-%{api_version}/extensions/*
+%_libdir/evolution/%major_version/plugins/*org-gnome-exchange*
 %{_datadir}/evolution-exchange
 %_datadir/gtk-doc/html/%name
+%_datadir/evolution/%major_version/errors/*.error
