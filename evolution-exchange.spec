@@ -14,12 +14,11 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.29.3
+Version: 2.29.4
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-Patch: evolution-exchange-replace-e_error-by-e_alert.patch
 URL: 		http://www.ximian.com/products/ximian_evolution/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
@@ -53,7 +52,6 @@ Currently, only Exchange 2000 and 2003 are supported.
 
 %prep
 %setup -q 
-%patch -p1
 
 %build
 export CPPFLAGS="$CPPFLAGS -I%_includedir/libical"
