@@ -1,4 +1,4 @@
-%define major_version 2.30
+%define major_version 3.0
 %define evolution_version %version
 %define eds_version %version
 %define api_version 1.2
@@ -10,7 +10,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.30.2
+Version: 2.31.5
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
@@ -22,7 +22,6 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
 BuildRequires: evolution-data-server-devel >= %eds_version
-BuildRequires: gnome-pilot-devel
 BuildRequires: libcanberra-devel
 BuildRequires: db4-devel
 BuildRequires: openldap-devel 
@@ -34,8 +33,6 @@ BuildRequires: gnome-common
 BuildRequires: libmono-devel
 %endif
 BuildRequires: gtk-doc
-#gw this is only required because it is in libgpilotd.la
-BuildRequires: hal-devel
 #gw another .la dep
 BuildRequires: gnome-desktop-devel
 Obsoletes: ximian-connector
