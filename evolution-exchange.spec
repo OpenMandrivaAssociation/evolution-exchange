@@ -1,4 +1,4 @@
-%define major_version 3.0
+%define major_version 2.32
 %define evolution_version %version
 %define eds_version %version
 %define api_version 1.2
@@ -10,7 +10,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.31.5
+Version: 2.31.6
 Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
@@ -65,21 +65,21 @@ rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/*.{a,la} \
  $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/evolution-mail-importers/*.{a,la} \
  $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/evolution-calendar-importers/*.{a,la}
 
-%{find_lang} %{name}-%{major_version} --with-gnome
+%{find_lang} %{name}-3.0 --with-gnome
 
 %clean
 [ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
 
 %post
-%post_install_gconf_schemas apps_exchange_addressbook-%major_version
+%post_install_gconf_schemas apps_exchange_addressbook-3.0
 
 %preun
-%preun_uninstall_gconf_schemas apps_exchange_addressbook-%major_version
+%preun_uninstall_gconf_schemas apps_exchange_addressbook-3.0
 
-%files -f %{name}-%{major_version}.lang
+%files -f %{name}-3.0.lang
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog NEWS README
-%_sysconfdir/gconf/schemas/apps_exchange_addressbook-%major_version.schemas
+%_sysconfdir/gconf/schemas/apps_exchange_addressbook-3.0.schemas
 %{_bindir}/*
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.so
 %{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.urls
