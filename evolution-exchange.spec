@@ -33,8 +33,8 @@ BuildRequires: gnome-common
 BuildRequires: libmono-devel
 %endif
 BuildRequires: gtk-doc
-#gw another .la dep
-BuildRequires: gnome-desktop-devel
+#gw another .la dep 
+BuildRequires: gnome-desktop-devel libgdata-devel
 Obsoletes: ximian-connector
 Provides: ximian-connector
 
