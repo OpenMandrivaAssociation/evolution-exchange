@@ -22,7 +22,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
 BuildRequires: evolution-data-server-devel >= %eds_version
-BuildRequires: libcanberra-devel
+BuildRequires: libcanberra-gtk-devel
 BuildRequires: db4-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
