@@ -11,22 +11,22 @@
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
 Version: 2.32.2
-Release: %mkrel 1
+Release: %mkrel 2
 License: 	GPLv2
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch0:		evolution-exchange-2.32.2-gtk-2.24.patch
 URL: 		http://projects.gnome.org/evolution/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
-
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel >= %{evolution_version}
 BuildRequires: evolution-data-server-devel >= %eds_version
-BuildRequires: libcanberra-gtk-devel
-BuildRequires: db4-devel
+BuildRequires: libGConf2-devel GConf2
+BuildRequires: db-devel
 BuildRequires: openldap-devel 
 BuildRequires: krb5-devel
-BuildRequires: automake1.9
+BuildRequires: automake
 BuildRequires: intltool
 BuildRequires: gnome-common
 %if %{build_mono}
@@ -45,12 +45,12 @@ for Evolution.
 Currently, only Exchange 2000 and 2003 are supported.
 
 %prep
-%setup -q 
+%setup -q
+%patch0 -p1
 
 %build
 export CPPFLAGS="$CPPFLAGS -I%_includedir/libical"
-%configure2_5x --with-openldap=yes --with-static-ldap=no --enable-gtk-doc
-
+%configure2_5x --with-openldap=yes --with-static-ldap=no --enable-gtk-doc --disable-static
 %make
 
 %install
