@@ -10,8 +10,8 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.32.2
-Release: %mkrel 2
+Version: 2.32.3
+Release: %mkrel 1
 License: 	GPLv2
 Group:		Networking/Mail
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
