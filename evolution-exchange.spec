@@ -1,6 +1,6 @@
 %define major_version 2.32
-%define evolution_version %version
-%define eds_version %version
+%define evolution_version 2.32.2
+%define eds_version 2.32.2
 %define api_version 1.2
 
 %define build_mono 1
