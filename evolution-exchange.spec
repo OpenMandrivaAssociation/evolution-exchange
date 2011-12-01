@@ -54,21 +54,21 @@ export CPPFLAGS="$CPPFLAGS -I%_includedir/libical"
 %make
 
 %install
-[ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
+[ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}
 
 %makeinstall_std
 
 
 #remove unpackaged files
-rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/*.{a,la} \
- $RPM_BUILD_ROOT%{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.{a,la} \
- $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/evolution-mail-importers/*.{a,la} \
- $RPM_BUILD_ROOT%{_libdir}/evolution/%{major_version}/evolution-calendar-importers/*.{a,la}
+rm -f %{buildroot}%{_libdir}/evolution/%{major_version}/*.{a,la} \
+ %{buildroot}%{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.{a,la} \
+ %{buildroot}%{_libdir}/evolution/%{major_version}/evolution-mail-importers/*.{a,la} \
+ %{buildroot}%{_libdir}/evolution/%{major_version}/evolution-calendar-importers/*.{a,la}
 
 %{find_lang} %{name}-%{major_version} --with-gnome
 
 %clean
-[ -n "$RPM_BUILD_ROOT" -a "$RPM_BUILD_ROOT" != / ] && rm -rf $RPM_BUILD_ROOT
+[ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}
 
 %post
 %post_install_gconf_schemas apps_exchange_addressbook-%{major_version}
