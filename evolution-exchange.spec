@@ -1,6 +1,6 @@
-%define major_version 2.32
-%define evolution_version 2.32.2
-%define eds_version 2.32.2
+%define major_version 3.4
+%define evolution_version 3.4.1
+%define eds_version 3.4
 %define api_version 1.2
 
 %define build_mono 1
@@ -10,12 +10,11 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 2.32.3
-Release: %mkrel 2
+Version: 3.4.1
+Release: 1
 License: 	GPLv2
 Group:		Networking/Mail
-Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-Patch0:		evolution-exchange-2.32.2-gtk-2.24.patch
+Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 URL: 		http://projects.gnome.org/evolution/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 # (fc) 0.8-5mdk implicit dependency is not enough
@@ -46,7 +45,6 @@ Currently, only Exchange 2000 and 2003 are supported.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 export CPPFLAGS="$CPPFLAGS -I%_includedir/libical"
