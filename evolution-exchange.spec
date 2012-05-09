@@ -80,9 +80,6 @@ rm -f %{buildroot}%{_libdir}/evolution/%{major_version}/*.{a,la} \
 %doc AUTHORS COPYING ChangeLog NEWS README
 %_sysconfdir/gconf/schemas/apps_exchange_addressbook-%{major_version}.schemas
 %{_bindir}/*
-%{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.so
-%{_libdir}/evolution-data-server-%{api_version}/camel-providers/*.urls
-%{_libdir}/evolution-data-server-%{api_version}/extensions/*
 %_libdir/evolution/%major_version/plugins/*org-gnome-exchange*
 %{_datadir}/evolution-exchange
 %_datadir/gtk-doc/html/%name
