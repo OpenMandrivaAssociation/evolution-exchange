@@ -20,7 +20,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 # (fc) 0.8-5mdk implicit dependency is not enough
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel
-BuildRequires: evolution-data-server-devel >= %eds_version
+BuildRequires: evolution-data-server-devel
 BuildRequires: libGConf2-devel GConf2
 BuildRequires: db-devel
 BuildRequires: openldap-devel 
