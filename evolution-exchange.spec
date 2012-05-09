@@ -81,6 +81,10 @@ rm -f %{buildroot}%{_libdir}/evolution/%{major_version}/*.{a,la} \
 %_sysconfdir/gconf/schemas/apps_exchange_addressbook-%{major_version}.schemas
 %{_bindir}/*
 %_libdir/evolution/%major_version/plugins/*org-gnome-exchange*
+%_libdir/evolution-exchange/%major_version
+%_libdir/evolution-data-server/addressbook-backends/libebookbackendexchange.so
+%_libdir/evolution-data-server/calendar-backends/libecalbackendexchange.so
+%_libdir/evolution-data-server/camel-providers/libcamelexchange.*
 %{_datadir}/evolution-exchange
 %_datadir/gtk-doc/html/%name
 %_datadir/evolution/%major_version/errors/*.error
