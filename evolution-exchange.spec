@@ -21,6 +21,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Requires: evolution >= %{evolution_version}
 BuildRequires: evolution-devel
 BuildRequires: evolution-data-server-devel
+BuildRequires: pkgconfig(libedata-book-1.2) pkgconfig(libebackend-1.2) pkgconfig(libedata-cal-1.2)
 BuildRequires: libGConf2-devel GConf2
 BuildRequires: db-devel
 BuildRequires: openldap-devel 
