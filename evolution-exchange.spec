@@ -10,7 +10,7 @@
 
 Name:		evolution-exchange
 Summary:	Exchange Connector for Evolution
-Version: 3.4.1
+Version: 3.4.3
 Release: 1
 License: 	GPLv2
 Group:		Networking/Mail
