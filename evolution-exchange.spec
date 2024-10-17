@@ -14,7 +14,7 @@ Version:	3.4.4
 Release:	1
 License:	GPLv2
 Group:		Networking/Mail
-URL:		http://projects.gnome.org/evolution/
+URL:		https://projects.gnome.org/evolution/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 
 BuildRequires:	gnome-common
