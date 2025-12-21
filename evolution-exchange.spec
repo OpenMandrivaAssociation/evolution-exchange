@@ -17,6 +17,11 @@ Group:		Networking/Mail
 URL:		https://projects.gnome.org/evolution/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
 BuildRequires:	intltool
